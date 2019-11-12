@@ -1,0 +1,12 @@
+{
+  "name": "read",
+  "version": "0.0.0",
+  "bin": "./source",
+  "private": true,
+  "description": "read program",
+  "author": "shunsuke",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "microbit": "lancaster-university/microbit"
+  }
+}
