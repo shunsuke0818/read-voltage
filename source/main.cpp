@@ -12,6 +12,7 @@ MicroBitPin analogRead[2] = {uBit.io.P3, uBit.io.P0}; //読み取り用のピン
 
 int main(){
 	//読み取り準備
+	uBit.init();
 	uBit.display.disable(); //ディスプレイに使用しているピンを開放
 	for(int i = 0; i < TATE; i++) digitalOut[i].setDigitalValue(0); //全てのトランジスタのベース電圧をLOWにする
 	
