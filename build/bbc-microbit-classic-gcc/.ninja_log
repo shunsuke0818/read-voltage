@@ -248,3 +248,8 @@
 4783	5550	1573617402	ym/microbit-dal/source/CMakeFiles/microbit-dal.dir/bluetooth/MicroBitUARTService.cpp.o	b6b665962351e209
 5550	5566	1573617402	ym/microbit-dal/source/microbit-dal.a	8bfa9b60772400c2
 5566	5748	1573617402	source/read	c6934f82cc692632
+3	11	1573704667	ym/nrf51-sdk/source/nrf51-sdk.a	c3f1df6ef6d05b15
+11	20	1573704667	ym/ble-nrf51822/source/ble-nrf51822.a	9899f8ec971f4487
+20	26	1573704667	ym/ble/source/ble.a	74214dc8f47cda85
+3	344	1573704667	source/CMakeFiles/read.dir/home/shunsuke/read/source/main.cpp.o	27228c20c512eba8
+344	528	1573704668	source/read	c6934f82cc692632
