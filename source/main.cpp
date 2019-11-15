@@ -1,34 +1,45 @@
-//2 x 2の読み取り
+//実サイズ
 #include "MicroBit.h"
 
-#define TATE	2
-#define YOKO	2
+#define TATE		9
+#define YOKO		7
+#define MUX_READ	4 //マルチプレクサで拡張するピンの数
 
-uint16_t board[TATE][YOKO]; //このプログラムでは読み取った値をそのまま入れるため0~1023の値が入る。
-									 //uint8_tだと入り切らないためuint16_tを使う。実際は値を変換してuint8_tに収める。
+uint16_t board[TATE][YOKO];
 MicroBit uBit;
-MicroBitPin digitalOut[TATE] = {uBit.io.P6, uBit.io.P7}; //トランジスタのベースへ繋げるピンを配列に定義
-MicroBitPin analogRead[YOKO] = {uBit.io.P3, uBit.io.P0}; //読み取り用のピンを配列に定義
+
+//言わずと知れたbitRead()
+bool BitRead(uint8_t n, uint8_t d){
+	n >>= d;
+	return n & 1;
+}
+
+//マルチプレクサで参照するピンを任意にセットする
+void MuxSet(uint8_t n){
+	static MicroBitPin muxControl[3] = {uBit.io.P14, uBit.io.P15, uBit.io.P16}; //マルチプレクサ操作用ピン
+	for(int i = 0; i < 3; i++) muxControl[i].setDigitalValue(BitRead(n, i));
+}
+
 
 int main(){
-	//読み取り準備
+	MicroBitPin digitalOut[YOKO] = {uBit.io.P5, uBit.io.P6, uBit.io.P7, uBit.io.P8, uBit.io.P9, uBit.io.P11, uBit.io.P13};
+	MicroBitPin analogRead[TATE - MUX_READ] = {uBit.io.P3, uBit.io.P0, uBit.io.P4, uBit.io.P1, uBit.io.P10};
+	MicroBitPin muxRead = uBit.io.P2; //マルチプレクサで読み取るピン
+
 	uBit.init();
-	uBit.display.disable(); //ディスプレイに使用しているピンを開放
-	for(int i = 0; i < TATE; i++) digitalOut[i].setDigitalValue(0); //全てのトランジスタのベース電圧をLOWにする
+	uBit.display.disable();
+	for(int i = 0; i < YOKO; i++) digitalOut[i].setDigitalValue(0);
 	
 	//ここから読み取り
-	for(int i = 0; i < TATE; i++){
-		digitalOut[i].setDigitalValue(1); //i行目のトランジスタのベース電圧をHIGHにする
-		for(int j = 0; j < YOKO; j++) board[i][j] = analogRead[j].getAnalogValue(); //i行j列の読み取り
-		////////////////
-		//!!!!注意!!!!// ブロックを接続してないマスもきれいに0にはならずに2とか3の低い値を読み取るため、変換のときに一定の値以下は0にすること。
-		////////////////
-		digitalOut[i].setDigitalValue(0); //i行目のトランジスタのベース電圧をLOWにする
+	for(int i = 0; i < YOKO; i++){
+		digitalOut[i].setDigitalValue(1);
+		for(int j = 0; j < TATE - MUX_READ; j++) board[j][i] = analogRead[j].getAnalogValue();
+		//これ以降はマルチプレクサで読み取る
+		for(int j = TATE - MUX_READ; j < TATE; j++){
+			MuxSet(j - MUX_READ - 1);
+			board[j][i] = muxRead.getAnalogValue();
+		}
+		digitalOut[i].setDigitalValue(0);
 	}
-	uBit.display.enable(); //ディスプレイに使い終わったピンを返してあげる
-
-	//読み取った値の表示
-	for(int i = 0; i < TATE; i++){
-		for(int j = 0; j < YOKO; j++) uBit.display.scroll(board[i][j]);
-	}
+	uBit.display.enable();
 }
