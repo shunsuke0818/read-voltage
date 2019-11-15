@@ -22,9 +22,9 @@ void MuxSet(uint8_t n){
 
 
 int main(){
-	MicroBitPin digitalOut[YOKO] = {uBit.io.P5, uBit.io.P6, uBit.io.P7, uBit.io.P8, uBit.io.P9, uBit.io.P11, uBit.io.P13};
-	MicroBitPin analogRead[TATE - MUX_READ] = {uBit.io.P3, uBit.io.P0, uBit.io.P4, uBit.io.P1, uBit.io.P10};
-	MicroBitPin muxRead = uBit.io.P2; //マルチプレクサで読み取るピン
+	static MicroBitPin digitalOut[YOKO] = {uBit.io.P5, uBit.io.P6, uBit.io.P7, uBit.io.P8, uBit.io.P9, uBit.io.P11, uBit.io.P13};
+	static MicroBitPin analogRead[TATE - MUX_READ] = {uBit.io.P3, uBit.io.P0, uBit.io.P4, uBit.io.P1, uBit.io.P10};
+	static MicroBitPin muxRead = uBit.io.P2; //マルチプレクサで読み取るピン
 
 	uBit.init();
 	uBit.display.disable();
