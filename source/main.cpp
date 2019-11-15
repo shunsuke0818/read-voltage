@@ -14,16 +14,11 @@ bool BitRead(uint8_t n, uint8_t d){
 	return n & 1;
 }
 
-//マルチプレクサで参照するピンを任意にセットする
-void MuxSet(uint8_t n){
-	static MicroBitPin muxControl[3] = {uBit.io.P14, uBit.io.P15, uBit.io.P16}; //マルチプレクサ操作用ピン
-	for(int i = 0; i < 3; i++) muxControl[i].setDigitalValue(BitRead(n, i));
-}
-
 
 int main(){
 	static MicroBitPin digitalOut[YOKO] = {uBit.io.P5, uBit.io.P6, uBit.io.P7, uBit.io.P8, uBit.io.P9, uBit.io.P11, uBit.io.P13};
 	static MicroBitPin analogRead[TATE - MUX_READ] = {uBit.io.P3, uBit.io.P0, uBit.io.P4, uBit.io.P1, uBit.io.P10};
+	static MicroBitPin muxControl[3] = {uBit.io.P14, uBit.io.P15, uBit.io.P16}; //マルチプレクサ操作用ピン
 	static MicroBitPin muxRead = uBit.io.P2; //マルチプレクサで読み取るピン
 
 	uBit.init();
@@ -36,7 +31,7 @@ int main(){
 		for(int j = 0; j < TATE - MUX_READ; j++) board[j][i] = analogRead[j].getAnalogValue();
 		//これ以降はマルチプレクサで読み取る
 		for(int j = TATE - MUX_READ; j < TATE; j++){
-			MuxSet(j - MUX_READ - 1);
+			for(int k = 0; k < 3; k++) muxControl[k].setDigitalValue(BitRead(j - MUX_READ - 1, k));
 			board[j][i] = muxRead.getAnalogValue();
 		}
 		digitalOut[i].setDigitalValue(0);
