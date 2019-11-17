@@ -46,10 +46,12 @@ void OnButton(MicroBitEvent){
 				uBit.serial.send("   ");
 			}else if(board[i][j] < 1000){
 				uBit.serial.send("  ");
+			}else{
+				uBit.serial.send(" ");
 			}
 			uBit.serial.send(board[i][j]);
 		}
-		uBit.serial.send("\r\n");
+		uBit.serial.send("\r\n\r\n");
 	}
 }
 
