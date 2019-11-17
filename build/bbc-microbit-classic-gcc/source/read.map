@@ -6205,78 +6205,78 @@ LOAD /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtn.o
                 0x0000000000027518        0x4 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libc_nano.a(lib_a-impure.o)
                 0x0000000000027518                _global_impure_ptr
  .rodata._Z8OnButton13MicroBitEvent.str1.1
-                0x000000000002751c        0xa source/CMakeFiles/read.dir/home/shunsuke/read/source/main.cpp.o
-                                         0x13 (size before relaxing)
+                0x000000000002751c        0xb source/CMakeFiles/read.dir/home/shunsuke/read/source/main.cpp.o
+                                         0x17 (size before relaxing)
  .rodata._ZL18microbitDisplayMap
-                0x0000000000027526       0x36 ym/microbit/source/microbit.a(MicroBit.cpp.o)
+                0x0000000000027527       0x36 ym/microbit/source/microbit.a(MicroBit.cpp.o)
  .rodata._ZN8MicroBit4initEv.str1.1
-                0x000000000002755c       0x1b ym/microbit/source/microbit.a(MicroBit.cpp.o)
- .rodata        0x0000000000027577       0x19 ym/microbit-dal/source/microbit-dal.a(MicroBitDevice.cpp.o)
+                0x000000000002755d       0x1b ym/microbit/source/microbit.a(MicroBit.cpp.o)
+ .rodata        0x0000000000027578       0x19 ym/microbit-dal/source/microbit-dal.a(MicroBitDevice.cpp.o)
  .rodata._ZL18microbitDisplayMap
-                0x0000000000027590       0x36 ym/microbit-dal/source/microbit-dal.a(MicroBitDevice.cpp.o)
+                0x0000000000027591       0x36 ym/microbit-dal/source/microbit-dal.a(MicroBitDevice.cpp.o)
  .rodata._ZL9panicFace
-                0x00000000000275c6        0x5 ym/microbit-dal/source/microbit-dal.a(MicroBitDevice.cpp.o)
+                0x00000000000275c7        0x5 ym/microbit-dal/source/microbit-dal.a(MicroBitDevice.cpp.o)
  .rodata._ZL10pendolino3
-                0x00000000000275cb      0x1db ym/microbit-dal/source/microbit-dal.a(MicroBitFont.cpp.o)
+                0x00000000000275cc      0x1db ym/microbit-dal/source/microbit-dal.a(MicroBitFont.cpp.o)
  .rodata._ZN25MicroBitCompassCalibrator11calibrateUXE13MicroBitEvent.str1.1
-                0x00000000000277a6       0x65 ym/microbit-dal/source/microbit-dal.a(MicroBitCompassCalibrator.cpp.o)
+                0x00000000000277a7       0x65 ym/microbit-dal/source/microbit-dal.a(MicroBitCompassCalibrator.cpp.o)
  .rodata._ZZN25MicroBitCompassCalibrator11calibrateUXE13MicroBitEventE9perimeter
-                0x000000000002780b       0x32 ym/microbit-dal/source/microbit-dal.a(MicroBitCompassCalibrator.cpp.o)
+                0x000000000002780c       0x32 ym/microbit-dal/source/microbit-dal.a(MicroBitCompassCalibrator.cpp.o)
  .rodata._ZN19MicroBitThermometerC2ER15MicroBitStoraget.str1.1
-                0x000000000002783d        0x8 ym/microbit-dal/source/microbit-dal.a(MicroBitThermometer.cpp.o)
- .rodata        0x0000000000027845       0x83 ym/microbit-dal/source/microbit-dal.a(MicroBitBLEManager.cpp.o)
+                0x000000000002783e        0x8 ym/microbit-dal/source/microbit-dal.a(MicroBitThermometer.cpp.o)
+ .rodata        0x0000000000027846       0x83 ym/microbit-dal/source/microbit-dal.a(MicroBitBLEManager.cpp.o)
  .rodata.MICROBIT_BLE_POWER_LEVEL
-                0x00000000000278c8        0x8 ym/microbit-dal/source/microbit-dal.a(MicroBitBLEManager.cpp.o)
-                0x00000000000278c8                MICROBIT_BLE_POWER_LEVEL
+                0x00000000000278c9        0x8 ym/microbit-dal/source/microbit-dal.a(MicroBitBLEManager.cpp.o)
+                0x00000000000278c9                MICROBIT_BLE_POWER_LEVEL
  .rodata._ZL25bleSysAttrMissingCallbackPK32GattSysAttrMissingCallbackParams.str1.1
-                0x00000000000278d0        0xc ym/microbit-dal/source/microbit-dal.a(MicroBitBLEManager.cpp.o)
+                0x00000000000278d1        0xc ym/microbit-dal/source/microbit-dal.a(MicroBitBLEManager.cpp.o)
  .rodata._ZN18MicroBitBLEManager11pairingModeER15MicroBitDisplayR14MicroBitButton.str1.1
-                0x00000000000278dc       0xd9 ym/microbit-dal/source/microbit-dal.a(MicroBitBLEManager.cpp.o)
+                0x00000000000278dd       0xd9 ym/microbit-dal/source/microbit-dal.a(MicroBitBLEManager.cpp.o)
  .rodata._ZN18MicroBitBLEManager4initE13ManagedStringS0_R10EventModelb.str1.1
-                0x00000000000279b5        0xe ym/microbit-dal/source/microbit-dal.a(MicroBitBLEManager.cpp.o)
+                0x00000000000279b6        0xe ym/microbit-dal/source/microbit-dal.a(MicroBitBLEManager.cpp.o)
  .rodata.str1.1
-                0x00000000000279c3       0x16 ym/microbit-dal/source/microbit-dal.a(MicroBitBLEManager.cpp.o)
+                0x00000000000279c4       0x16 ym/microbit-dal/source/microbit-dal.a(MicroBitBLEManager.cpp.o)
  .rodata.MicroBitDFUServiceControlCharacteristicUUID
-                0x00000000000279d9       0x10 ym/microbit-dal/source/microbit-dal.a(MicroBitDFUService.cpp.o)
-                0x00000000000279d9                MicroBitDFUServiceControlCharacteristicUUID
+                0x00000000000279da       0x10 ym/microbit-dal/source/microbit-dal.a(MicroBitDFUService.cpp.o)
+                0x00000000000279da                MicroBitDFUServiceControlCharacteristicUUID
  .rodata.MicroBitDFUServiceUUID
-                0x00000000000279e9       0x10 ym/microbit-dal/source/microbit-dal.a(MicroBitDFUService.cpp.o)
-                0x00000000000279e9                MicroBitDFUServiceUUID
+                0x00000000000279ea       0x10 ym/microbit-dal/source/microbit-dal.a(MicroBitDFUService.cpp.o)
+                0x00000000000279ea                MicroBitDFUServiceUUID
  .rodata.MicroBitEventServiceClientEventCharacteristicUUID
-                0x00000000000279f9       0x10 ym/microbit-dal/source/microbit-dal.a(MicroBitEventService.cpp.o)
-                0x00000000000279f9                MicroBitEventServiceClientEventCharacteristicUUID
+                0x00000000000279fa       0x10 ym/microbit-dal/source/microbit-dal.a(MicroBitEventService.cpp.o)
+                0x00000000000279fa                MicroBitEventServiceClientEventCharacteristicUUID
  .rodata.MicroBitEventServiceClientRequirementsCharacteristicUUID
-                0x0000000000027a09       0x10 ym/microbit-dal/source/microbit-dal.a(MicroBitEventService.cpp.o)
-                0x0000000000027a09                MicroBitEventServiceClientRequirementsCharacteristicUUID
+                0x0000000000027a0a       0x10 ym/microbit-dal/source/microbit-dal.a(MicroBitEventService.cpp.o)
+                0x0000000000027a0a                MicroBitEventServiceClientRequirementsCharacteristicUUID
  .rodata.MicroBitEventServiceMicroBitEventCharacteristicUUID
-                0x0000000000027a19       0x10 ym/microbit-dal/source/microbit-dal.a(MicroBitEventService.cpp.o)
-                0x0000000000027a19                MicroBitEventServiceMicroBitEventCharacteristicUUID
+                0x0000000000027a1a       0x10 ym/microbit-dal/source/microbit-dal.a(MicroBitEventService.cpp.o)
+                0x0000000000027a1a                MicroBitEventServiceMicroBitEventCharacteristicUUID
  .rodata.MicroBitEventServiceMicroBitRequirementsCharacteristicUUID
-                0x0000000000027a29       0x10 ym/microbit-dal/source/microbit-dal.a(MicroBitEventService.cpp.o)
-                0x0000000000027a29                MicroBitEventServiceMicroBitRequirementsCharacteristicUUID
+                0x0000000000027a2a       0x10 ym/microbit-dal/source/microbit-dal.a(MicroBitEventService.cpp.o)
+                0x0000000000027a2a                MicroBitEventServiceMicroBitRequirementsCharacteristicUUID
  .rodata.MicroBitEventServiceUUID
-                0x0000000000027a39       0x10 ym/microbit-dal/source/microbit-dal.a(MicroBitEventService.cpp.o)
-                0x0000000000027a39                MicroBitEventServiceUUID
+                0x0000000000027a3a       0x10 ym/microbit-dal/source/microbit-dal.a(MicroBitEventService.cpp.o)
+                0x0000000000027a3a                MicroBitEventServiceUUID
  .rodata._ZNK3BLE14hasInitializedEv.str1.1
-                0x0000000000027a49       0x23 ym/ble/source/ble.a(BLE.cpp.o)
+                0x0000000000027a4a       0x23 ym/ble/source/ble.a(BLE.cpp.o)
  .rodata._ZN6nRF5xn10getVersionEv.str1.1
-                0x0000000000027a6c       0x64 ym/ble-nrf51822/source/ble-nrf51822.a(nRF5xn.cpp.o)
+                0x0000000000027a6d       0x64 ym/ble-nrf51822/source/ble-nrf51822.a(nRF5xn.cpp.o)
  .rodata._ZZN8nRF5xGap25getPermittedTxPowerValuesEPPKaPjE17permittedTxValues
-                0x0000000000027ad0        0x9 ym/ble-nrf51822/source/ble-nrf51822.a(nRF5xGap.cpp.o)
+                0x0000000000027ad1        0x9 ym/ble-nrf51822/source/ble-nrf51822.a(nRF5xGap.cpp.o)
  .rodata.CSWTCH.32
-                0x0000000000027ad9        0x3 ym/ble-nrf51822/source/ble-nrf51822.a(btle_security.cpp.o)
+                0x0000000000027ada        0x3 ym/ble-nrf51822/source/ble-nrf51822.a(btle_security.cpp.o)
  .rodata._Z13btle_gap_initv.str1.1
-                0x0000000000027adc        0x6 ym/ble-nrf51822/source/ble-nrf51822.a(btle_gap.cpp.o)
+                0x0000000000027add        0x6 ym/ble-nrf51822/source/ble-nrf51822.a(btle_gap.cpp.o)
  .rodata.i2c_init.str1.1
-                0x0000000000027ae2       0x11 ym/mbed-classic/existing/mbed-classic.a(i2c_api.c.o)
+                0x0000000000027ae3       0x11 ym/mbed-classic/existing/mbed-classic.a(i2c_api.c.o)
  .rodata.pinmap_peripheral.str1.1
-                0x0000000000027af3       0x20 ym/mbed-classic/existing/mbed-classic.a(pinmap_common.c.o)
+                0x0000000000027af4       0x20 ym/mbed-classic/existing/mbed-classic.a(pinmap_common.c.o)
  .rodata._svfprintf_r.str1.1
-                0x0000000000027b13       0x11 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libc_nano.a(lib_a-nano-svfprintf.o)
+                0x0000000000027b14       0x11 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libc_nano.a(lib_a-nano-svfprintf.o)
  .rodata._printf_i.str1.1
-                0x0000000000027b24       0x22 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libc_nano.a(lib_a-nano-vfprintf_i.o)
+                0x0000000000027b25       0x22 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v6-m/libc_nano.a(lib_a-nano-vfprintf_i.o)
  *(SORT_BY_ALIGNMENT(.eh_frame*))
- *fill*         0x0000000000027b46        0x2 
+ *fill*         0x0000000000027b47        0x1 
  .eh_frame      0x0000000000027b48        0x0 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtbegin.o
  .eh_frame      0x0000000000027b48        0x4 /usr/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v6-m/crtend.o
 

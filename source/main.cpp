@@ -41,13 +41,13 @@ void OnButton(MicroBitEvent){
 	for(int i = 0; i < TATE; i++){
 		for(int j = 0; j < YOKO; j++){
 			if(board[i][j] < 10){
-				uBit.serial.send("    ");
+				uBit.serial.send("     ");
 			}else if(board[i][j] < 100){
-				uBit.serial.send("   ");
+				uBit.serial.send("    ");
 			}else if(board[i][j] < 1000){
-				uBit.serial.send("  ");
+				uBit.serial.send("   ");
 			}else{
-				uBit.serial.send(" ");
+				uBit.serial.send("  ");
 			}
 			uBit.serial.send(board[i][j]);
 		}
