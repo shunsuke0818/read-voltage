@@ -8,13 +8,6 @@
 uint16_t board[TATE][YOKO];
 MicroBit uBit;
 
-//言わずと知れたbitRead()
-bool BitRead(uint8_t n, uint8_t d){
-	n >>= d;
-	return n & 1;
-}
-
-
 int main(){
 	static MicroBitPin digitalOut[YOKO] = {uBit.io.P5, uBit.io.P6, uBit.io.P7, uBit.io.P8, uBit.io.P9, uBit.io.P11, uBit.io.P13};
 	static MicroBitPin analogRead[TATE - MUX_READ] = {uBit.io.P3, uBit.io.P0, uBit.io.P4, uBit.io.P1, uBit.io.P10};
@@ -30,9 +23,9 @@ int main(){
 		digitalOut[i].setDigitalValue(1);
 		for(int j = 0; j < TATE - MUX_READ; j++) board[j][i] = analogRead[j].getAnalogValue();
 		//これ以降はマルチプレクサで読み取る
-		for(int j = TATE - MUX_READ; j < TATE; j++){
-			for(int k = 0; k < 3; k++) muxControl[k].setDigitalValue(BitRead(j - MUX_READ - 1, k));
-			board[j][i] = muxRead.getAnalogValue();
+		for(int j = 0; j < MUX_READ; j++){
+			for(int k = 0; k < 3; k++) muxControl[k].setDigitalValue((j >> k) & 1);
+			board[j + MUX_READ + 1][i] = muxRead.getAnalogValue();
 		}
 		digitalOut[i].setDigitalValue(0);
 	}
