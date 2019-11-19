@@ -5,53 +5,53 @@ cmake_minimum_required(VERSION 2.8.11)
 include_directories("/home/shunsuke/read/yotta_modules/ble-nrf51822/source")
 
 
-set(YOTTA_AUTO_BLE-NRF51822_CPP_FILES
-    "/home/shunsuke/read/yotta_modules/ble-nrf51822/source/btle/btle_security.cpp"
-    "/home/shunsuke/read/yotta_modules/ble-nrf51822/source/btle/btle.cpp"
-    "/home/shunsuke/read/yotta_modules/ble-nrf51822/source/nRF5xDiscoveredCharacteristic.cpp"
-    "/home/shunsuke/read/yotta_modules/ble-nrf51822/source/nRF5xGattClient.cpp"
-    "/home/shunsuke/read/yotta_modules/ble-nrf51822/source/btle/btle_gap.cpp"
-    "/home/shunsuke/read/yotta_modules/ble-nrf51822/source/nRF5xServiceDiscovery.cpp"
-    "/home/shunsuke/read/yotta_modules/ble-nrf51822/source/btle/custom/custom_helper.cpp"
-    "/home/shunsuke/read/yotta_modules/ble-nrf51822/source/btle/btle_advertising.cpp"
-    "/home/shunsuke/read/yotta_modules/ble-nrf51822/source/btle/btle_discovery.cpp"
-    "/home/shunsuke/read/yotta_modules/ble-nrf51822/source/nRF5xCharacteristicDescriptorDiscoverer.cpp"
-    "/home/shunsuke/read/yotta_modules/ble-nrf51822/source/nRF5xGattServer.cpp"
-    "/home/shunsuke/read/yotta_modules/ble-nrf51822/source/nRF5xn.cpp"
-    "/home/shunsuke/read/yotta_modules/ble-nrf51822/source/nRF5xGap.cpp"
-)
-# force dependency on the config header for cpp files, which CMake otherwise wouldn't track:
-set_property(SOURCE ${YOTTA_AUTO_BLE-NRF51822_CPP_FILES} PROPERTY OBJECT_DEPENDS "/home/shunsuke/read/build/bbc-microbit-classic-gcc/yotta_config.h")
 set(YOTTA_AUTO_BLE-NRF51822_HEADER_FILES
-    "/home/shunsuke/read/yotta_modules/ble-nrf51822/source/btle/custom/custom_helper.h"
-    "/home/shunsuke/read/yotta_modules/ble-nrf51822/source/nRF5xServiceDiscovery.h"
-    "/home/shunsuke/read/yotta_modules/ble-nrf51822/source/btle/btle_gap.h"
-    "/home/shunsuke/read/yotta_modules/ble-nrf51822/source/common/common.h"
-    "/home/shunsuke/read/yotta_modules/ble-nrf51822/source/nRF5xDiscoveredCharacteristic.h"
-    "/home/shunsuke/read/yotta_modules/ble-nrf51822/source/projectconfig.h"
-    "/home/shunsuke/read/yotta_modules/ble-nrf51822/source/nRF5xSecurityManager.h"
-    "/home/shunsuke/read/yotta_modules/ble-nrf51822/source/common/ansi_escape.h"
-    "/home/shunsuke/read/yotta_modules/ble-nrf51822/source/nRF5xGattClient.h"
-    "/home/shunsuke/read/yotta_modules/ble-nrf51822/source/btle/btle_advertising.h"
-    "/home/shunsuke/read/yotta_modules/ble-nrf51822/source/common/assertion.h"
-    "/home/shunsuke/read/yotta_modules/ble-nrf51822/source/nRF5xGap.h"
     "/home/shunsuke/read/yotta_modules/ble-nrf51822/source/nRF5xGattServer.h"
-    "/home/shunsuke/read/yotta_modules/ble-nrf51822/source/btle/btle.h"
-    "/home/shunsuke/read/yotta_modules/ble-nrf51822/source/common/binary.h"
-    "/home/shunsuke/read/yotta_modules/ble-nrf51822/source/btle/btle_discovery.h"
-    "/home/shunsuke/read/yotta_modules/ble-nrf51822/source/btle/btle_security.h"
-    "/home/shunsuke/read/yotta_modules/ble-nrf51822/source/common/compiler.h"
-    "/home/shunsuke/read/yotta_modules/ble-nrf51822/source/common/ble_error.h"
-    "/home/shunsuke/read/yotta_modules/ble-nrf51822/source/nRF5xn.h"
+    "/home/shunsuke/read/yotta_modules/ble-nrf51822/source/btle/btle_gap.h"
+    "/home/shunsuke/read/yotta_modules/ble-nrf51822/source/nRF5xDiscoveredCharacteristic.h"
     "/home/shunsuke/read/yotta_modules/ble-nrf51822/source/nRF5xCharacteristicDescriptorDiscoverer.h"
+    "/home/shunsuke/read/yotta_modules/ble-nrf51822/source/nRF5xSecurityManager.h"
+    "/home/shunsuke/read/yotta_modules/ble-nrf51822/source/btle/btle_discovery.h"
+    "/home/shunsuke/read/yotta_modules/ble-nrf51822/source/common/assertion.h"
+    "/home/shunsuke/read/yotta_modules/ble-nrf51822/source/common/ble_error.h"
+    "/home/shunsuke/read/yotta_modules/ble-nrf51822/source/btle/btle_advertising.h"
+    "/home/shunsuke/read/yotta_modules/ble-nrf51822/source/common/ansi_escape.h"
+    "/home/shunsuke/read/yotta_modules/ble-nrf51822/source/common/common.h"
+    "/home/shunsuke/read/yotta_modules/ble-nrf51822/source/common/compiler.h"
+    "/home/shunsuke/read/yotta_modules/ble-nrf51822/source/nRF5xServiceDiscovery.h"
+    "/home/shunsuke/read/yotta_modules/ble-nrf51822/source/nRF5xn.h"
+    "/home/shunsuke/read/yotta_modules/ble-nrf51822/source/nRF5xGap.h"
+    "/home/shunsuke/read/yotta_modules/ble-nrf51822/source/btle/custom/custom_helper.h"
+    "/home/shunsuke/read/yotta_modules/ble-nrf51822/source/common/binary.h"
+    "/home/shunsuke/read/yotta_modules/ble-nrf51822/source/btle/btle_security.h"
+    "/home/shunsuke/read/yotta_modules/ble-nrf51822/source/nRF5xGattClient.h"
+    "/home/shunsuke/read/yotta_modules/ble-nrf51822/source/btle/btle.h"
+    "/home/shunsuke/read/yotta_modules/ble-nrf51822/source/projectconfig.h"
 )
 # force dependency on the config header for header files, which CMake otherwise wouldn't track:
 set_property(SOURCE ${YOTTA_AUTO_BLE-NRF51822_HEADER_FILES} PROPERTY OBJECT_DEPENDS "/home/shunsuke/read/build/bbc-microbit-classic-gcc/yotta_config.h")
+set(YOTTA_AUTO_BLE-NRF51822_CPP_FILES
+    "/home/shunsuke/read/yotta_modules/ble-nrf51822/source/btle/btle.cpp"
+    "/home/shunsuke/read/yotta_modules/ble-nrf51822/source/btle/btle_discovery.cpp"
+    "/home/shunsuke/read/yotta_modules/ble-nrf51822/source/nRF5xGap.cpp"
+    "/home/shunsuke/read/yotta_modules/ble-nrf51822/source/nRF5xGattServer.cpp"
+    "/home/shunsuke/read/yotta_modules/ble-nrf51822/source/nRF5xCharacteristicDescriptorDiscoverer.cpp"
+    "/home/shunsuke/read/yotta_modules/ble-nrf51822/source/btle/btle_security.cpp"
+    "/home/shunsuke/read/yotta_modules/ble-nrf51822/source/btle/btle_advertising.cpp"
+    "/home/shunsuke/read/yotta_modules/ble-nrf51822/source/nRF5xDiscoveredCharacteristic.cpp"
+    "/home/shunsuke/read/yotta_modules/ble-nrf51822/source/nRF5xGattClient.cpp"
+    "/home/shunsuke/read/yotta_modules/ble-nrf51822/source/nRF5xn.cpp"
+    "/home/shunsuke/read/yotta_modules/ble-nrf51822/source/nRF5xServiceDiscovery.cpp"
+    "/home/shunsuke/read/yotta_modules/ble-nrf51822/source/btle/btle_gap.cpp"
+    "/home/shunsuke/read/yotta_modules/ble-nrf51822/source/btle/custom/custom_helper.cpp"
+)
+# force dependency on the config header for cpp files, which CMake otherwise wouldn't track:
+set_property(SOURCE ${YOTTA_AUTO_BLE-NRF51822_CPP_FILES} PROPERTY OBJECT_DEPENDS "/home/shunsuke/read/build/bbc-microbit-classic-gcc/yotta_config.h")
 
 
 add_library(ble-nrf51822
-    ${YOTTA_AUTO_BLE-NRF51822_CPP_FILES}
     ${YOTTA_AUTO_BLE-NRF51822_HEADER_FILES}
+    ${YOTTA_AUTO_BLE-NRF51822_CPP_FILES}
 )
 
 yotta_postprocess_target(LIBRARY ble-nrf51822)

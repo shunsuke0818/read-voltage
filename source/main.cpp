@@ -37,7 +37,7 @@ void OnButton(MicroBitEvent){
 	uBit.display.disable();
 	read();
 	uBit.display.enable();
-	//値を表示
+	//値を表示(デバッグ用)
 	for(int i = 0; i < TATE; i++){
 		for(int j = 0; j < YOKO; j++){
 			if(board[i][j] < 10){
@@ -53,6 +53,8 @@ void OnButton(MicroBitEvent){
 		}
 		uBit.serial.send("\r\n\r\n");
 	}
+	uBit.serial.send("-----------------------------------------------------");
+	uBit.serial.send("\r\n\r\n");
 }
 
 
