@@ -36,7 +36,7 @@ void read(){
 void OnButton(MicroBitEvent){
 	uBit.display.disable();
 	read();
-	uBit.display.enable();
+	//uBit.display.enable();
 	//値を表示(デバッグ用)
 	for(int i = 0; i < TATE; i++){
 		for(int j = 0; j < YOKO; j++){
